@@ -1,0 +1,17 @@
+<mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{stat.name}}</mat-card-title>
+      <mat-card-subtitle >{{stat.institution}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{stat.img}} alt="stat photo">
+    <mat-card-content>
+      <mat-chip-listbox aria-label="topics">
+        <mat-chip-option *ngFor="let topic of stat.topics">{{topic}}</mat-chip-option>
+      </mat-chip-listbox>
+    </mat-card-content>
+    <mat-card-actions class="d-flex justify-content-around pt-2">
+      <button *ngIf="read_flag_hijo" routerLink="/stats/{{stat.index}}" mat-raised-button id="read_more" #readActive>Leer más</button>
+      <button *ngIf="edit_flag_hijo" (click)="onUpdateStat()" mat-raised-button #editActive>Editar</button>
+      <button mat-raised-button color="warn" (click)="onDeleteStat()">Eliminar</button>
+    </mat-card-actions>
+  </mat-card>

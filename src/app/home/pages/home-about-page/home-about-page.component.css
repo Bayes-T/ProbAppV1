@@ -1,0 +1,21 @@
+.about {
+    height: 100%;
+}
+
+.about__title {
+    font-size: 4rem;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    color: var(--mainColor);
+    line-height: 40pt;
+    text-align: center;
+}
+
+.about__img{
+    height: 30%;
+    background-image: url("/assets/pandaSM.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 5%;
+}

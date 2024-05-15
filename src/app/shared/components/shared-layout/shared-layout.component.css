@@ -1,0 +1,32 @@
+
+#toolbar {
+    top: 0;
+    position: sticky;
+    z-index: 10;
+    background-color: var(--mainColor);
+    color: white;
+}
+
+mat-sidenav-container{
+background-color: transparent;
+height: 100%
+}
+mat-sidenav{
+width: 20%;
+background-color: var(--mainColor);
+}
+
+/* TODO: RECORDAR QUE EL INLINE-FLEX NO FUNCIONABA PORQUE NO AGREGUE LAS DIRECTIVAS DE ANGULAR MATERIAL
+COMO COLOCO LAS LETRAS DEL MAT-SIDENAV EN BLANCO?? carrusel, diferentes opciones, hay ui armados y diferentes planteamientos como cambiar el row, o el class active si es uno solo */
+
+#maticon{
+    color: white;
+}
+
+#itemname{
+    color: white;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

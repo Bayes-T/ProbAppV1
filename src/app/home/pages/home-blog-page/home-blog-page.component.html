@@ -1,0 +1,75 @@
+<div class="blog">
+    <div class="blog__title">
+        <p class="blog__title__large">ProbApp Blog</p>
+        <p class="blog__title__med">Novedades del mundo de la estadística y la probabilidad</p>
+
+        <div class="blog__title__email">
+            <input type="text" placeholder="Ingresa tu email"> <button class="sub">Suscribirme</button>
+        </div>
+    </div>
+    <hr>
+    <div class="blog__search d-flex">
+        <form class="form">
+            <button>
+                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <input class="input" placeholder="¿Qué buscas?" required="" type="text">
+            <button class="reset" type="reset">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </form>
+        <form>
+            <select name="category" id="category-select" class="rounded">
+                <option value="">Categoría</option>
+                <option value="bio">Biografías</option>
+                <option value="theory">Teoría</option>
+                <option value="tools">Herramientas online</option>
+                <option value="news">Últimas noticias</option>
+
+              </select>
+        </form>
+    </div>
+
+    <div class="blog__content grid">
+        <div class="row">
+        <mat-card class="example-card col-5">
+            <mat-card-header>
+              <div mat-card-avatar class="header-image1"></div>
+              <mat-card-title>Últimos avances</mat-card-title>
+              <mat-card-subtitle>Juan Pérez Phd</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image class="blog__img" src="assets/news.jpg" alt="man reading news">
+            <mat-card-content>
+              <p>
+                Esta semana tenemos...
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button id="sub--sm">Leer más</button>
+            </mat-card-actions>
+          </mat-card> <!--fin de la card-->
+
+          <mat-card class="example-card col-5">
+            <mat-card-header>
+              <div mat-card-avatar class="header-image2"></div>
+              <mat-card-title>Thomas Bayes</mat-card-title>
+              <mat-card-subtitle>Ana Gutiérrez</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image class="blog__img" src="assets/bays.png" alt="animated bayes">
+            <mat-card-content>
+              <p>
+                Thomas Bayes (Londres, Inglaterra...)
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button id="sub--sm">Leer más</button>
+
+            </mat-card-actions>
+          </mat-card> <!--find de la card-->
+        </div>
+    </div>
+</div>

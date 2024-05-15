@@ -1,0 +1,62 @@
+<div class="container mt-4 vh-100">
+    <div class="addForm">
+        <form [formGroup]="addForm">
+            <div class="form-group">
+              <label for="name">Nombre del estadístico</label>
+              <input formControlName="name" type="text" class="form-control" id="name" placeholder="Thomas Bayes">
+              <span *ngIf="isValid('name')" class="form-text text-danger">
+                {{getFieldError('name')}}
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="bithplace">Lugar de nacimiento</label>
+              <input formControlName="bithplace" type="text" class="form-control" id="bithplace" placeholder="Londres">
+              <span *ngIf="isValid('bithplace')" class="form-text text-danger">
+                {{getFieldError('bithplace')}}
+              </span>
+            </div>
+
+
+            <div class="form-group">
+                <label for="institution">Institución</label>
+                <input formControlName="institution" type="text" class="form-control" id="institution" placeholder="Universidad de Edimburgo">
+                <span *ngIf="isValid('institution')" class="form-text text-danger">
+                  {{getFieldError('institution')}}
+                </span>
+              </div>
+
+              <legend class="mt-2">Temas de interés</legend>
+              <div>
+                <input class="me-4"  type="text" value="Estadística Bayesiana" >
+                <input (change)="onCheck1($event)" [checked]="check1" type="checkbox" />
+              </div>
+              <div>
+                <input class="me-4" type="text" value="Optimización">
+                <input (change)="onCheck2($event)" [checked]="check2" type="checkbox"  id="Check2"/>
+            </div>
+              <div>
+                <input class="me-4" type="text" value="Estadística General" >
+                <input (change)="onCheck3($event)" [checked]="check3" type="checkbox"   id="Check3"/>
+              </div>
+              <div>
+                <input class="me-4" type="text" value="Matemática General" >
+                <input (change)="onCheck4($event)" [checked]="check4" type="checkbox"  id="Check4"/>
+                </div>
+                <div>
+                <input formControlName="maininterest" type="text" class="form-control mt-2" id="main" placeholder="Estadística Bayesiana">
+                <span *ngIf="isValid('maininterest')" class="form-text text-danger">
+                  {{getFieldError('maininterest')}}
+                </span>
+              </div>
+
+              <div class="form-group mt-2">
+                <input formControlName="img" type="text" class="form-control" id="img" placeholder="Url de la imagen">
+                <span *ngIf="isValid('img')" class="form-text text-danger">
+                  {{getFieldError('img')}}
+                </span>
+              </div>
+
+            <button (click)="onSave(newStat)" type="submit" class="btn btn-primary mt-2">Submit</button>
+          </form>
+    </div>
+</div>

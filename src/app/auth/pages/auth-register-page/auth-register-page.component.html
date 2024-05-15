@@ -1,0 +1,63 @@
+<div class="container">
+      <form [formGroup]="userForm" (ngSubmit)="onSave()" class="w-50" id="registerForm">
+        <div class="grid">
+            <div class="row">
+        <div class="form-group">
+          <label for="Email1">Email address</label>
+          <input formControlName="email" type="text" class="form-control" id="Email1" placeholder="Ingresa tu email">
+          <span class="form-text text-danger" *ngIf="isValid('email')">
+            {{getFieldError('email')}}
+          </span>
+        </div>
+         </div> <!-- fin primera fila-->
+
+         <div class="row">
+            <div class="col">
+         <div class="form-group">
+            <label for="Name1"> </label>
+            <input formControlName="name" type="text" class="form-control" id="Name1" placeholder="¿Cómo te llamas?">
+            <span class="form-text text-danger" *ngIf="isValid('name')">
+              {{getFieldError('name')}}
+            </span>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="form-group">
+            <label for=""> </label>
+            <select formControlName="education" class="form-select   mb-3" aria-label=".form-select-lg example">
+              <option value="null" selected>Selecciona tu nivel de estudios</option>
+              <option value="Preuniversitario">Preuniversitario</option>
+              <option value="Pregrado">Pregrado</option>
+              <option value="Posgrado">Posgrado</option>
+            </select>
+
+
+          </div>
+        </div>
+        </div> <!-- fin segunda fila-->
+
+        <div class="row">
+        <div class="form-group">
+          <label for="Password1"> </label>
+          <input formControlName="password1" type="password" class="form-control" id="Password1" placeholder="Ingresa tu contraseña">
+          <span class="form-text text-danger" *ngIf="isValid('password1')">
+            {{getFieldError('password1')}}
+          </span>
+        </div>  
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+            <label for="Password2">  </label>
+          <input formControlName="password2" type="password" class="form-control" id="Password2" placeholder="Repite tu contraseña">
+          <span class="form-text text-danger" *ngIf="isValid('password2')">
+            {{getFieldError('password2')}}
+          </span>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2 d-block mx-auto w-75">Registrarme</button>
+    </div> <!-- fin del grid-->
+      </form>
+
+</div>

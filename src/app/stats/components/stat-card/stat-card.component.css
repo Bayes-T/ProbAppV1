@@ -1,0 +1,22 @@
+
+.card {
+    height: 80vh;
+}
+mat-card img {
+    height: 50vh;
+    margin: 5px;
+}
+
+#read_more {
+    background-color: var(--mainColor);
+    color: white;
+}
+
+.title_center {
+    display: flex;
+    justify-content: end;
+  }
+
+button {
+    font-weight: bold;
+}

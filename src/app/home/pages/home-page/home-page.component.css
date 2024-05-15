@@ -1,0 +1,50 @@
+.home {
+    height:100%;
+}
+
+.home__title {
+    margin-top: 20%;
+    font-size: 4rem;
+    margin-bottom: 10%;
+}
+
+.home__title-color {
+    color: #3653F8;
+}
+
+.home__title__row{
+    margin-bottom: 15%;
+}
+
+.home__title__row:last-of-type{
+    margin-bottom: 10%;
+}
+
+/* Aqui defini el tamaño mediante el div con block, no se si sea mejor ir directamente al button para cambiarle de tamaño directamente y no al div, que puede cambiar la altura pero no el div */
+.home__button {
+    display: inline-block;
+    height: 10%;
+    width: 100%;
+}
+
+button {
+
+    font-weight: bold;
+    color: white;
+    border-radius: 2rem;
+    width: 30%;
+    height: 70%;
+    border: none;
+    background-color: #3653F8;
+  }
+  
+  button .span-mother {
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* TO DO: 
+  La segunda linea es porque puse con vh100, intentar con body y html al 100 para poder manejar los porcentajes.
+  PUEDO MANEJAR EL HEIGHT DE BOTON, PERO EL WIDTH ES AUTO POR EL CONTENIDO, TRATAR DE ARREGLAR
+  Y HACER EL EFECTO DEL TITLE QUE SEA EN TRES LINEAS GRANDES CON COLORES Y EMOJIS
+ */

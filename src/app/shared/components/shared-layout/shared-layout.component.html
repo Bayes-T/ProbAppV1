@@ -1,0 +1,38 @@
+<mat-toolbar id="toolbar">
+    <button (click)="sidenav.toggle()"
+mat-icon-button class="example-icon">
+<mat-icon>menu</mat-icon>
+</button>
+<span>ProbApp</span>
+<span class="example-spacer"></span>
+<button mat-icon-button class="example-icon favorite-icon">
+<mat-icon>favorite</mat-icon>
+</button>
+<span>
+  {{currentUser?.email}}
+</span>
+<button mat-icon-button class="example-icon">
+<mat-icon>share</mat-icon>
+</button>
+ </mat-toolbar>
+ 
+
+ <mat-sidenav-container>
+   <mat-sidenav #sidenav mode="side">
+    <mat-nav-list>
+        <mat-list-item id="matlist" class="d-inline-flex" *ngFor="let item of itemList" [routerLink]="item.url">
+           <mat-icon id="maticon" matListItemIcon> {{item.icon}}</mat-icon>
+           <div matListItemTitle id="itemname">{{item.name}}</div> 
+        </mat-list-item>
+        <mat-list-item (click)="logout()" id="matlist2" class="d-inline-flex" [routerLink]="'/auth/register'">
+          <mat-icon id="maticon" matListItemIcon> logout</mat-icon>
+          <div matListItemTitle id="itemname">Salir</div> 
+       </mat-list-item>
+    </mat-nav-list>
+   </mat-sidenav>
+   <mat-sidenav-content>
+    <div class="background">
+     <router-outlet></router-outlet>
+    </div>
+   </mat-sidenav-content>
+ </mat-sidenav-container>

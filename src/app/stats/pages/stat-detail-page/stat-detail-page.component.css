@@ -1,0 +1,16 @@
+span{
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.col-4 {
+    margin-right: 100px;
+}
+
+.carrousel {
+    border-radius: 5px;
+    background-color: white;
+    height: 20vh;
+    font-weight: bold;
+    font-size: 3vh;
+}

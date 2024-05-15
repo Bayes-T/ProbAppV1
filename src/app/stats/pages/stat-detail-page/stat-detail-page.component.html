@@ -1,0 +1,32 @@
+<div class="container vh-100">
+    <div class="grid">
+        <div class="row mt-4">
+        <div class="col-4">
+    <stat-card [stat]="stat" [read_flag_hijo]="read_flag"></stat-card>
+    </div> <!-- fin de la columna izq-->
+
+    <div class="col-5">
+        <mat-card>
+            <mat-card-title class="mb-4 text-center">Información básica</mat-card-title>
+            <mat-card-content><p><span>{{stat.name}}</span> nació en <span>{{stat.bithplace}}</span> y gran parte de su trabajo se desarrolló en <span>{{stat.institution | instPipe}}</span> y su principal interés fue la <span>{{stat.maininterest}}</span>.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, architecto facilis expedita, ad laborum quia illo labore a rem maxime placeat, neque perferendis porro recusandae quaerat maiores? Temporibus, nihil aspernatur!</p>    
+
+            <p>En resumren, durante su carrera se interesó en los siguientes temas: <span>{{stat.topics | topicsPipe}}</span></p>
+            </mat-card-content>
+          </mat-card>
+
+          <div class="carrousel mt-5 d-flex align-items-center justify-content-center">
+                <div routerLink="/stats/{{+stat.index - 1}}" class="carrousel__content__left d-inline-flex">
+                    <mat-icon>keyboard_arrow_left</mat-icon>
+                    <span>Anterior</span>
+                </div>
+                <div routerLink="/stats/{{+stat.index + 1}}" class="carrousel__content__right d-inline-flex ms-5">
+                    <mat-icon>keyboard_arrow_right</mat-icon> 
+                    <span>Siguiente</span>
+                </div>
+          </div>
+    </div> <!-- fin de columna derecha-->
+    </div> <!-- fin del row-->
+    </div> <!-- fin del grid-->
+</div>

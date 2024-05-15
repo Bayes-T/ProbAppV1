@@ -1,0 +1,55 @@
+<div class="layout_page h-100">
+<!--TO DO: CREAR BIEN LA ESTRUCTURA DEL LAYOUT PARA QUE EL ROUTER OUTLET OCUPE UN ESPACIO A LA IZQ Y QUE SEA EL SUFICIENTE. MODIFICAR ESTRUCTURA. AHORA NI SE VE.-->
+  <div class="container">
+
+    <div class="row toolbar">
+        <p>
+            <mat-toolbar class="rounded mt-3 mb-2" id="toolbar">
+              <a routerLink="/home/landing">
+              <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>view_timeline</mat-icon>
+              </button>
+              <span>ProbApp</span>
+            </a>
+              <span class="spacer"></span>
+              <a routerLink="/home/about">
+              <span>Nosotros</span>
+              <button mat-icon-button aria-label="icon about">
+                <mat-icon>psychology_alt</mat-icon>
+              </button>
+            </a>
+            <a routerLink="/home/blog">
+              <span>Blog</span>
+              <button mat-icon-button aria-label="blog icon">
+                <mat-icon>book</mat-icon>
+              </button>
+              <button mat-icon-button aria-label="blog icon">
+                <mat-icon>share</mat-icon>
+              </button>
+            </a>
+            </mat-toolbar>
+          </p>
+    </div>
+
+    
+    <div class="maincontent col-4">
+      <router-outlet/>
+    </div>
+  </div> <!-- fin del container-->
+
+
+ 
+  <!--Estos están fijados de manera absoluta-->
+    <div class="background_card"></div>
+
+    <div class="card">
+        <p class="cookieHeading">Estadística y probabilidad</p>
+        <p class="cookieDescription">Aplicando la teoría para un mundo mejor <a href="#">¿Cómo?</a></p>
+    </div>
+
+</div>
+
+
+
+
+
